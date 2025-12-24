@@ -24,19 +24,19 @@ The first step is to clone the main iDempiere project, which provides the core l
 
 ```bash
 # Clone version 12 of the iDempiere project
-git clone --branch release-12 https://github.com/idempiere/idempiere.git idempiere-12
+git clone --branch release-12 https://github.com/idempiere/idempiere.git
 ```
 
-This will create a directory named `idempiere-12` containing the iDempiere source code.
+This will create a directory named `idempiere` containing the iDempiere source code.
 
 Make the core and `zkoss-idempiere-examples` sibling directories.
 
 ### 2. Build iDempiere Core
 
-This creates a local p2 repository at `idempiere-12/org.idempiere.p2/target/repository`.
+This creates a local p2 repository at `idempiere/org.idempiere.p2/target/repository`.
 
 ```bash
-cd idempiere-12
+cd idempiere
 mvn clean install
 ```
 
@@ -50,7 +50,7 @@ mvn clean install
 
 Since we want the web UI to load ZK PE/EE widgets (e.g., from zkex and zkmax), use the fragment project `org.idempiere.zkee.comps.fragment`:
 
-1) Build the fragment in the core repo (it lives at `idempiere/org.idempiere.zkee.comps.fragment`):
+1) Build the fragment in the core repo (it lives at `zkoss-idempiere-examples/org.idempiere.zkee.comps.fragment`):
 ```bash
 cd zkoss-idempiere-examples/org.idempiere.zkee.comps.fragment
 mvn -U -DskipTests -am verify
