@@ -1,5 +1,5 @@
 # Building the iDempiere ZK EE Components Example Plugin
-This document provides a step-by-step guide on how to build the `org.idempiere.zkee.comps.example` plugin from the `zkoss-idempiere-examples` repository.
+By default, iDempiere uses ZK CE as its UI framework. To leverage advanced components and features available in ZK EE, an additional ZK EE plugin is required. This document provides a step-by-step guide on how to build the `org.idempiere.zkee.comps.example` plugin from the `zkoss-idempiere-examples` repository.
 
 For general iDempiere plugin development guidelines, refer to the [iDempiere Wiki](https://wiki.idempiere.org/en/Developing_Plug-Ins_-_Get_your_Plug-In_running).
 
@@ -105,6 +105,9 @@ mvn clean -U -DskipTests -am verify
   - `src/metainfo/zk.xml`: sets EE-specific library property (`org.zkoss.zkmax.au.IWBS.disable=true`).
   - `lib/zkex.jar`, `lib/gson.jar`, `lib/zkmax.jar`: ZK PE/EE binaries with `metainfo/zk/lang-addon.xml` and widget resources.
   - `target/`: built outputs (`org.idempiere.zkee.comps.fragment-<version>.jar`, generated manifest, p2 metadata).
+ 
+License Note: 
+ZK EE is commercially licensed. This project uses the Evaluation Repository, which allows you to try ZK EE at no cost. When you are ready to use ZK EE in production, please obtain a valid license from ZK Framework and switch to the official ZK EE repository to access the licensed EE components.
 
 ### 6. Use ZK EE components in your own plugin (e.g., `org.idempiere.zkee.comps.example`)
  
